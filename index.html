@@ -1,0 +1,371 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <title>Phone Speech Capture</title>
+    <link rel="stylesheet" href="css/site.css">
+</head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+
+<body>
+    <div id="controls">
+        <div id="info">
+            <p class="instructions">Phone Speech Capture</p>
+            <button id="ready-button">Start Client</button>
+            <label for="gender">Your gender</label>
+            <select id="gender">
+            <option value="male" description="united_states">Male</option>
+            <option value="female" description="australia">Female</option>
+        </select>
+            <label for="language_selection_remote">Local Language</label>
+            <select id="language_selection_local">
+            <optgroup label="ENGLISH DIALECTS">
+                <option value="en-US" description="united_states">English, USA</option>
+                <option value="en-AU" description="australia">English, AU</option>
+                <option value="en-CA" description="canada">English, CA</option>
+                <option value="en-GH" description="ghana">English, Ghana</option>
+                <option value="en-GB" description="english">English, UK</option>
+                <option value="en-IN" description="hindi">English, India</option>
+                <option value="en-EI" description="ireland">English, Ireland</option>
+                <option value="en-KE" description="Kiswahili">English, Kenya</option>
+                <option value="en-NZ" description="new_zealand">English, NZ</option>
+                <option value="en-NG" description="nigeria">English, Nigeria</option>
+                <option value="en-SG" description="singapore">English, Singapore</option>
+                <option value="en-PH" description="filipino">English, Philippines</option>
+                <option value="en-ZA" description="afrikaans">English, So Africa</option>
+                <option value="en-TZ" description="tanzania">English, Tanzania</option>
+            </optgroup>
+            <optgroup label="SPANISH DIALECTS">
+                <option value="es-MX" description="mexican">Spanish, International</option>
+                <option value="es-MX" description="mexican">Spanish, Mexico</option>
+                <option value="es-AR" description="argentina">Spanish, Argentina</option>
+                <option value="es-BO" description="bolivia">Spanish, Bolivia</option>
+                <option value="es-CL" description="chile">Spanish, Chile</option>
+                <option value="es-CO" description="colombia">Spanish, Colombia</option>
+                <option value="es-CR" description="costa_rica">Spanish, Costa Rica</option>
+                <option value="es-DO" description="dominicana">Spanish, Dominica</option>
+                <option value="es-EC" description="ecuador">Spanish, Ecuador</option>
+                <option value="es-SV" description="salvador">Spanish, El Salvador</option>
+                <option value="es-ES" description="spanish">Spanish, Spain</option>
+                <option value="es-US" description="united_states">Spanish, USA</option>
+                <option value="es-GT" description="guatemala">Spanish, Guatemala</option>
+                <option value="es-HN" description="honduras">Spanish, Honduras</option>
+                <option value="es-MX" description="mexican">Spanish, Mexico</option>
+                <option value="es-NI" description="nicaragua">Spanish, Nicaragua</option>
+                <option value="es-PA" description="panama">Spanish, Panama</option>
+                <option value="es-PY" description="paraguay">Spanish, Paraguay</option>
+                <option value="es-PE" description="peru">Spanish, Peru</option>
+                <option value="es-PR" description="puerto_rico">Spanish, Puerto Rico</option>
+                <option value="es-UY" description="uruguay">Spanish, Uruguay</option>
+                <option value="es-VE" description="venezuela">Spanish, Venezuela</option>
+            </optgroup>
+            <optgroup label="ARABIC DIALECTS">
+                <option value="ar-AE" description="arabic">Arabic, International العربية</option>
+                <option value="ar-IL" description="israel">Arabic, Israel إسرائيل</option>
+                <option value="ar-JO" description="jordan">Arabic, Jordan الأردن</option>
+                <option value="ar-AE" description="uae">Arabic, UAE الإمارات</option>
+                <option value="ar-BH" description="bahrain">Arabic, Bahrain البحرين</option>
+                <option value="ar-DZ" description="algeria">Arabic, Algeria الجزائر</option>
+                <option value="ar-SA" description="saudi">Arabic, Saudi Arabia السعودية</option>
+                <option value="ar-IQ" description="iraq">Arabic, Iraq العراق</option>
+                <option value="ar-KW" description="kuwait">Arabic, Kuwait الكويت</option>
+                <option value="ar-MA" description="morocco">Arabic, Morocco المغرب</option>
+                <option value="ar-TN" description="tunisia">Arabic, Tunisia تونس</option>
+                <option value="ar-OM" description="oman">Arabic, Oman عُمان</option>
+                <option value="ar-PS" description="palestine">Arabic, Palestine فلسطين</option>
+                <option value="ar-QA" description="qatar">Arabic, Qatar قطر</option>
+                <option value="ar-LB" description="lebanon">Arabic, Lebanon لبنان</option>
+                <option value="ar-EG" description="egypt">Arabic, Egypt مصر</option>
+            </optgroup>
+            <optgroup label="GLOBAL LANGUAGES">
+                <option value="af-ZA" description="afrikaans">Afrikaans Suid-Afrika</option>
+                <option value="am-ET" description="ethiopia">Amharic, Ethiopia አማርኛ</option>
+                <option value="hy-AM" description="armenian">Armenian, Armenia Հայ</option>
+                <option value="az-AZ" description="azerbaijani">Azerbaijani, Azerbaijan</option>
+                <option value="eu-ES" description="spanish">Basque Espainia</option>
+                <option value="bn-BD" description="bengali">Bengali, Bangladesh</option>
+                <option value="bn-IN" description="hindi">Bengali, India</option>
+                <option value="bg-BG" description="bulgarian">Bulgarian България</option>
+                <option value="ca-ES" description="spanish">Catalan Espanya</option>
+                <option value="zh-TW" description="chinese_taiwan">Chinese, Taiwan 台灣
+                </option>
+                <option value="yue-Hant-HK" description="chinese_taiwan">Chinese, HK Trad 香港
+                </option>
+                <option value="zh-HK" description="chinese_beijing">Chinese, HK Simp 香港
+                </option>
+                <option value="zh" description="chinese_beijing">Chinese, HK 中国大陆
+                </option>
+                <option value="hr-HR" description="croatian">Croatian Hrvatska</option>
+                <option value="cs-CZ" description="czech">Czech Česká</option>
+                <option value="da-DK" description="danish">Danish Danmark</option>
+                <option value="nl-NL" description="dutch">Dutch Netherlands</option>
+                <option value="fil-PH" description="filipino">Filipino Pilipinas</option>
+                <option value="fi-FI" description="finnish">Finnish Suomi</option>
+                <option value="fr-FR" description="french">French, EU France</option>
+                <option value="fr-CA" description="canada">French, CA Canada</option>
+                <option value="gl-ES" description="spanish">Galician España</option>
+                <option value="de-DE" description="german">German Deutsch</option>
+                <option value="ka-GE" description="georgian">Georgian, Georgia ქართული</option>
+                <option value="gu-IN" description="hindi">Gujarati, India ગુજરાતી</option>
+                <option value="el-GR" description="greek">Greek Ελλάδα</option>
+                <option value="ja-JP" description="japanese">Japanese 日本</option>
+                <option value="he-IL" description="hebrew">Hebrew ישראל</option>
+                <option value="hi-IN" description="hindi">Hindi भारत</option>
+                <option value="hu-HU" description="hungarian">Hungarian Magyarország</option>
+                <option value="is-IS" description="icelandic">Icelandic Ísland</option>
+                <option value="id-ID" description="indonesian">Indonesian Indonesia</option>
+                <option value="it-IT" description="italian">Italian Italia</option>
+                <option value="jv-ID" description="indonesian">Jawa Indonesia</option>
+                <option value="kn-IN" description="hindi">Kannada India ಕನ್ನಡ</option>
+                <option value="km-KH" description="cambodia">Khmer Cambodia ភាសាខ្មែរ</option>
+                <option value="ko-KR" description="korean">Korean 대한민국</option>
+                <option value="lt-LT" description="lithuanian">Lithuanian Lietuva</option>
+                <option value="lo-LA" description="lao">Lao ລາວ</option>
+                <option value="lv-LV" description="latvian">Latviešu Latvia</option>
+                <option value="lt-LT	" description="lithuanian">Lietuvių Lithuania</option>
+                <option value="ms-MY" description="malay">Malay Malaysia</option>
+                <option value="ml-IN" description="hindi">Malayalam മലയാളം</option>
+                <option value="mr-IN" description="hindi">Marathi मराठी</option>
+                <option value="ne-NP" description="nepali">Nepali नेपाली</option>
+                <option value="nb-NO" description="norwegian">Norwegian Bokmål Norge</option>
+                <option value="fa-IR" description="persian">Persian ایران</option>
+                <option value="pl-PL" description="polish">Polish Polska</option>
+                <option value="pt-BR" description="brazilian">Portuguese, BR Brasil</option>
+                <option value="pt-PT" description="portuguese">Portuguese, EU Portugal</option>
+                <option value="ro-RO" description="romanian">Romanian România</option>
+                <option value="ru-RU" description="russian">Russian Россия</option>
+                <option value="sr-RS" description="serbian">Serbian Србија</option>
+                <option value="si-LK" description="sinhala">Sinhala සිංහල</option>
+                <option value="sk-SK" description="slovak">Slovak Slovensko</option>
+                <option value="sl-SI" description="slovenian">Slovenian Slovenija</option>
+                <option value="su-ID" description="sundanese">Sundanese Urang Indonesia</option>
+                <option value="sw-TZ" description="tanzania">Swahili Tanzania</option>
+                <option value="sw-KE" description="Kiswahili">Swahili Kenya</option>
+                <option value="es-ES" description="spanish">Spanish, Spain</option>
+                <option value="sv-SE" description="swedish">Swedish Sverige</option>
+                <option value="ta-IN" description="hindi">Tamil India தமிழ்</option>
+                <option value="ta-SG" description="singapore">Tamil Singapore தமிழ்</option>
+                <option value="ta-LK" description="srilanka">Tamil Sri Lanka தமிழ்</option>
+                <option value="ta-MY" description="malayalam">Tamil Malaysia தமிழ்</option>
+                <option value="te-IN" description="hindi">Telugu India తెలుగు</option>
+                <option value="th-TH" description="thai">Thai ประเทศไทย</option>
+                <option value="tr-TR" description="turkish">Turkish Türkiye</option>
+                <option value="uk-UA" description="ukrainian">Ukrainian Україна</option>
+                <option value="ur-PK" description="urdu">Urdu Pakistan پاکستان</option>
+                <option value="ur-IN" description="hindi">Urdu India بھارت</option>
+                <option value="vi-VN" description="vietnamese">Vietnamese Việt Nam</option>
+                <option value="zu-ZA" description="afrikaans">Zulu Ningizimu Afrika</option>
+            </optgroup>
+        </select>
+            <label for="language_selection_remote">Remote Language</label>
+            <select id="language_selection_remote">
+            <optgroup label="ENGLISH DIALECTS">
+                <option value="en-US" description="united_states">English, USA</option>
+                <option value="en-AU" description="australia">English, AU</option>
+                <option value="en-CA" description="canada">English, CA</option>
+                <option value="en-GH" description="ghana">English, Ghana</option>
+                <option value="en-GB" description="english">English, UK</option>
+                <option value="en-IN" description="hindi">English, India</option>
+                <option value="en-EI" description="ireland">English, Ireland</option>
+                <option value="en-KE" description="Kiswahili">English, Kenya</option>
+                <option value="en-NZ" description="new_zealand">English, NZ</option>
+                <option value="en-NG" description="nigeria">English, Nigeria</option>
+                <option value="en-SG" description="singapore">English, Singapore</option>
+                <option value="en-PH" description="filipino">English, Philippines</option>
+                <option value="en-ZA" description="afrikaans">English, So Africa</option>
+                <option value="en-TZ" description="tanzania">English, Tanzania</option>
+            </optgroup>
+            <optgroup label="SPANISH DIALECTS">
+                <option value="es-MX" description="mexican">Spanish, International</option>
+                <option value="es-MX" description="mexican">Spanish, Mexico</option>
+                <option value="es-AR" description="argentina">Spanish, Argentina</option>
+                <option value="es-BO" description="bolivia">Spanish, Bolivia</option>
+                <option value="es-CL" description="chile">Spanish, Chile</option>
+                <option value="es-CO" description="colombia">Spanish, Colombia</option>
+                <option value="es-CR" description="costa_rica">Spanish, Costa Rica</option>
+                <option value="es-DO" description="dominicana">Spanish, Dominica</option>
+                <option value="es-EC" description="ecuador">Spanish, Ecuador</option>
+                <option value="es-SV" description="salvador">Spanish, El Salvador</option>
+                <option value="es-ES" description="spanish">Spanish, Spain</option>
+                <option value="es-US" description="united_states">Spanish, USA</option>
+                <option value="es-GT" description="guatemala">Spanish, Guatemala</option>
+                <option value="es-HN" description="honduras">Spanish, Honduras</option>
+                <option value="es-MX" description="mexican">Spanish, Mexico</option>
+                <option value="es-NI" description="nicaragua">Spanish, Nicaragua</option>
+                <option value="es-PA" description="panama">Spanish, Panama</option>
+                <option value="es-PY" description="paraguay">Spanish, Paraguay</option>
+                <option value="es-PE" description="peru">Spanish, Peru</option>
+                <option value="es-PR" description="puerto_rico">Spanish, Puerto Rico</option>
+                <option value="es-UY" description="uruguay">Spanish, Uruguay</option>
+                <option value="es-VE" description="venezuela">Spanish, Venezuela</option>
+            </optgroup>
+            <optgroup label="ARABIC DIALECTS">
+                <option value="ar-AE" description="arabic">Arabic, International العربية</option>
+                <option value="ar-IL" description="israel">Arabic, Israel إسرائيل</option>
+                <option value="ar-JO" description="jordan">Arabic, Jordan الأردن</option>
+                <option value="ar-AE" description="uae">Arabic, UAE الإمارات</option>
+                <option value="ar-BH" description="bahrain">Arabic, Bahrain البحرين</option>
+                <option value="ar-DZ" description="algeria">Arabic, Algeria الجزائر</option>
+                <option value="ar-SA" description="saudi">Arabic, Saudi Arabia السعودية</option>
+                <option value="ar-IQ" description="iraq">Arabic, Iraq العراق</option>
+                <option value="ar-KW" description="kuwait">Arabic, Kuwait الكويت</option>
+                <option value="ar-MA" description="morocco">Arabic, Morocco المغرب</option>
+                <option value="ar-TN" description="tunisia">Arabic, Tunisia تونس</option>
+                <option value="ar-OM" description="oman">Arabic, Oman عُمان</option>
+                <option value="ar-PS" description="palestine">Arabic, Palestine فلسطين</option>
+                <option value="ar-QA" description="qatar">Arabic, Qatar قطر</option>
+                <option value="ar-LB" description="lebanon">Arabic, Lebanon لبنان</option>
+                <option value="ar-EG" description="egypt">Arabic, Egypt مصر</option>
+            </optgroup>
+            <optgroup label="GLOBAL LANGUAGES">
+                <option value="af-ZA" description="afrikaans">Afrikaans Suid-Afrika</option>
+                <option value="am-ET" description="ethiopia">Amharic, Ethiopia አማርኛ</option>
+                <option value="hy-AM" description="armenian">Armenian, Armenia Հայ</option>
+                <option value="az-AZ" description="azerbaijani">Azerbaijani, Azerbaijan</option>
+                <option value="eu-ES" description="spanish">Basque Espainia</option>
+                <option value="bn-BD" description="bengali">Bengali, Bangladesh</option>
+                <option value="bn-IN" description="hindi">Bengali, India</option>
+                <option value="bg-BG" description="bulgarian">Bulgarian България</option>
+                <option value="ca-ES" description="spanish">Catalan Espanya</option>
+                <option value="zh-TW" description="chinese_taiwan">Chinese, Taiwan 台灣
+                </option>
+                <option value="yue-Hant-HK" description="chinese_taiwan">Chinese, HK Trad 香港
+                </option>
+                <option value="zh-HK" description="chinese_beijing">Chinese, HK Simp 香港
+                </option>
+                <option value="zh" description="chinese_beijing">Chinese, HK 中国大陆
+                </option>
+                <option value="hr-HR" description="croatian">Croatian Hrvatska</option>
+                <option value="cs-CZ" description="czech">Czech Česká</option>
+                <option value="da-DK" description="danish">Danish Danmark</option>
+                <option value="nl-NL" description="dutch">Dutch Netherlands</option>
+                <option value="fil-PH" description="filipino">Filipino Pilipinas</option>
+                <option value="fi-FI" description="finnish">Finnish Suomi</option>
+                <option value="fr-FR" description="french">French, EU France</option>
+                <option value="fr-CA" description="canada">French, CA Canada</option>
+                <option value="gl-ES" description="spanish">Galician España</option>
+                <option value="de-DE" description="german">German Deutsch</option>
+                <option value="ka-GE" description="georgian">Georgian, Georgia ქართული</option>
+                <option value="gu-IN" description="hindi">Gujarati, India ગુજરાતી</option>
+                <option value="el-GR" description="greek">Greek Ελλάδα</option>
+                <option value="ja-JP" description="japanese">Japanese 日本</option>
+                <option value="he-IL" description="hebrew">Hebrew ישראל</option>
+                <option value="hi-IN" description="hindi">Hindi भारत</option>
+                <option value="hu-HU" description="hungarian">Hungarian Magyarország</option>
+                <option value="is-IS" description="icelandic">Icelandic Ísland</option>
+                <option value="id-ID" description="indonesian">Indonesian Indonesia</option>
+                <option value="it-IT" description="italian">Italian Italia</option>
+                <option value="jv-ID" description="indonesian">Jawa Indonesia</option>
+                <option value="kn-IN" description="hindi">Kannada India ಕನ್ನಡ</option>
+                <option value="km-KH" description="cambodia">Khmer Cambodia ភាសាខ្មែរ</option>
+                <option value="ko-KR" description="korean">Korean 대한민국</option>
+                <option value="lt-LT" description="lithuanian">Lithuanian Lietuva</option>
+                <option value="lo-LA" description="lao">Lao ລາວ</option>
+                <option value="lv-LV" description="latvian">Latviešu Latvia</option>
+                <option value="lt-LT	" description="lithuanian">Lietuvių Lithuania</option>
+                <option value="ms-MY" description="malay">Malay Malaysia</option>
+                <option value="ml-IN" description="hindi">Malayalam മലയാളം</option>
+                <option value="mr-IN" description="hindi">Marathi मराठी</option>
+                <option value="ne-NP" description="nepali">Nepali नेपाली</option>
+                <option value="nb-NO" description="norwegian">Norwegian Bokmål Norge</option>
+                <option value="fa-IR" description="persian">Persian ایران</option>
+                <option value="pl-PL" description="polish">Polish Polska</option>
+                <option value="pt-BR" description="brazilian">Portuguese, BR Brasil</option>
+                <option value="pt-PT" description="portuguese">Portuguese, EU Portugal</option>
+                <option value="ro-RO" description="romanian">Romanian România</option>
+                <option value="ru-RU" description="russian">Russian Россия</option>
+                <option value="sr-RS" description="serbian">Serbian Србија</option>
+                <option value="si-LK" description="sinhala">Sinhala සිංහල</option>
+                <option value="sk-SK" description="slovak">Slovak Slovensko</option>
+                <option value="sl-SI" description="slovenian">Slovenian Slovenija</option>
+                <option value="su-ID" description="sundanese">Sundanese Urang Indonesia</option>
+                <option value="sw-TZ" description="tanzania">Swahili Tanzania</option>
+                <option value="sw-KE" description="Kiswahili">Swahili Kenya</option>
+                <option value="es-ES" description="spanish">Spanish, Spain</option>
+                <option value="sv-SE" description="swedish">Swedish Sverige</option>
+                <option value="ta-IN" description="hindi">Tamil India தமிழ்</option>
+                <option value="ta-SG" description="singapore">Tamil Singapore தமிழ்</option>
+                <option value="ta-LK" description="srilanka">Tamil Sri Lanka தமிழ்</option>
+                <option value="ta-MY" description="malayalam">Tamil Malaysia தமிழ்</option>
+                <option value="te-IN" description="hindi">Telugu India తెలుగు</option>
+                <option value="th-TH" description="thai">Thai ประเทศไทย</option>
+                <option value="tr-TR" description="turkish">Turkish Türkiye</option>
+                <option value="uk-UA" description="ukrainian">Ukrainian Україна</option>
+                <option value="ur-PK" description="urdu">Urdu Pakistan پاکستان</option>
+                <option value="ur-IN" description="hindi">Urdu India بھارت</option>
+                <option value="vi-VN" description="vietnamese">Vietnamese Việt Nam</option>
+                <option value="zu-ZA" description="afrikaans">Zulu Ningizimu Afrika</option>
+            </optgroup>
+        </select>
+
+            <div id="call-controls">
+                <label for="button-call">Call</label>
+                <input id="phone-number" type="text" placeholder="Enter a phone number to call" />
+                <button id="button-call">Call</button>
+
+                <div class="toggle_labels">
+                    <label for="Bilingual">Bilingual</label>
+                    <label for="translateLocal">Translate Local</label>
+                    <label for="translateLocal">Translate Remote</label>
+
+                </div>
+
+                <div id="show_toggle" class="horizontal">
+
+                    <label class="switch l1">
+                        <input id="Bilingual" type="checkbox">
+                        <span class="slider round"></span>
+                    </label>
+
+                    <label class="switch  l2">
+                    <input id="translateLocal" type="checkbox" checked>
+                    <span class="slider round"></span>
+                </label>
+
+                    <label class="switch l3">
+                    <input id="translateRemote" type="checkbox" checked>
+                    <span class="slider round"></span>
+                </label>
+                </div>
+                <button id="button-hangup">Hangup</button>
+                <div id="volume-indicators" class="horizontal">
+                    <label>Mic Volume</label>
+                    <div id="input-volume"></div>
+                    <br/><br/>
+                    <label>Speaker Volume</label>
+                    <div id="output-volume"></div>
+                    <label>Playback audio to call</label>
+                    <button id="playback-audio-to-call">TEST AUDIO</button>
+                </div>
+            </div>
+        </div>
+
+        <img src="img/screen.png" alt="">
+        <div id="log"></div>
+    </div>
+
+    <!-- Show captured audio on screen as WAV audio elements. Right-click to save file... -->
+    <div id="audioLog" style="display:none;position:absolute; left: 10px; bottom: 10px; height: 200px; width: 330px; background-color: black; color: #00FFFF; overflow-y: auto; border-radius: 5px;">
+        Remote Audio Log
+    </div>
+
+    <div id="localAudioLog" style="display:none;position:absolute; right: 10px; bottom: 10px; height: 200px; width: 330px; background-color: black; color: #00FFFF; overflow-y: auto; border-radius: 5px;">
+        Local Audio Log
+    </div>
+
+    <script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <script type="text/javascript" src="lib/darows.min.js"></script>
+
+    
+
+    <script type="text/javascript" src="https://cdn.plivo.com/sdk/browser/v2/plivo.min.js"></script>
+    <script type="text/javascript" src="js/CallProviders/CallProviderPlivo.js"></script>
+    <script type="text/javascript" src="https://media.twiliocdn.com/sdk/js/client/v1.9/twilio.min.js"></script>
+    <script type="text/javascript" src="js/CallProviders/CallProviderTwilio.js"></script>
+    <script type="text/javascript" src="js/TTS.js"></script>
+    <script type="text/javascript" src="js/TYWI.js"></script>
+    <script type="text/javascript" src="js/twiliospeechcapture.js"></script>
+</body>
+
+</html>

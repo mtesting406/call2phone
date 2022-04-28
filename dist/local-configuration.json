@@ -1,0 +1,32 @@
+{
+    "audioLog": false,
+    "useCallProvider": "twilio",
+    "callProviders": {
+        "plivo": {
+            "username": "[PLIVO_USERNAME]",
+            "password": "[PLIVO_PASSWORD]"
+        },
+        "twilio": {
+            "capabilityTokenFunctionURL": "https://phlox-pointer-4752.twil.io/capability-token"
+        }
+    },
+    "TYWI": {
+        "speech": {
+            "translateyourworldapi": "Basic MsSttKey123",
+            "lang": "en-US",
+            "vendor": "Microsoft"
+        },
+        "translate": {
+            "translateyourworldapi": "Basic MsTransKey123",
+            "lang": "en",
+            "vendor": "Microsoft"
+
+        },
+        "speak": {
+            "translateyourworldapi": "Basic aa8b6f96-e2c6-4516-a4b3-ef92b1bc1ed9",
+            "lang": "en_uk",
+            "vendor": "ReadSpeaker"
+
+        }
+    }
+}

@@ -1,0 +1,269 @@
+﻿@import url(https://fonts.googleapis.com/css?family=Share+Tech+Mono);
+body,
+p {
+    padding: 0;
+    margin: 0;
+}
+
+body {
+    background-image: url('../img/bg.jpg');
+    min-height: 100%;
+    background-position: center;
+    background-size: cover;
+}
+
+body,
+html {
+    height: 100%
+}
+
+.monitor {
+    background-image: url('../img/screen.png');
+    min-height: 100%;
+    background-position: center;
+    background-size: cover;
+}
+
+label {
+    text-align: left;
+    font-family: Helvetica, sans-serif;
+    font-size: 1.25em;
+    color: #777776;
+    display: block;
+}
+
+div#controls {
+    padding: 3em;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+div#controls div {
+    float: left;
+}
+
+.toggle_labels {
+    display: inline-flex;
+    margin: auto;
+    width: 350px;
+    text-align: center;
+}
+
+div#controls div#call-controls,
+div#controls div#info {
+    width: 16em;
+    margin: 0 1.5em;
+    text-align: center;
+}
+
+label.switch {
+    text-align: center;
+}
+
+.l1 {
+    margin-left: 10px
+}
+
+.l2 {
+    margin-left: 50px
+}
+
+.l3 {
+    margin-left: 60px
+}
+
+div#controls div#info div#output-selection {
+    display: none;
+}
+
+div#controls div#info a {
+    font-size: 1.1em;
+    color: khaki;
+    text-decoration: underline;
+    cursor: pointer;
+}
+
+div#controls div#info select {
+    width: 300px;
+    height: 30px;
+    margin-bottom: 2em;
+}
+
+div#controls div#info label {
+    width: 300px;
+}
+
+.horizontal {
+    display: inline-flex;
+}
+
+div#controls div#call-controls div#volume-indicators {
+    display: none;
+    padding: 10px;
+    margin-top: 120px;
+    width: 500px;
+    text-align: left;
+}
+
+div#controls div#call-controls div#volume-indicators>div {
+    display: block;
+    height: 20px;
+    width: 0;
+}
+
+div#controls p.instructions {
+    text-align: left;
+    margin-bottom: 1em;
+    font-family: Helvetica-LightOblique, Helvetica, sans-serif;
+    font-style: oblique;
+    font-size: 1.25em;
+    color: #777776;
+}
+
+div#controls div#info #client-name {
+    text-align: left;
+    margin-bottom: 1em;
+    font-family: "Helvetica Light", Helvetica, sans-serif;
+    font-size: 1.25em;
+    color: #777776;
+}
+
+div#controls button {
+    width: 15em;
+    height: 2.5em;
+    margin-top: 1.75em;
+    margin-bottom: 5%;
+    border-radius: 1em;
+    font-family: "Helvetica Light", Helvetica, sans-serif;
+    font-size: .8em;
+    font-weight: lighter;
+    outline: 0;
+}
+
+div#controls button:active {
+    position: relative;
+    top: 1px;
+}
+
+div#controls div#call-controls {
+    display: none;
+    margin: 0;
+}
+
+div#controls div#call-controls input {
+    font-family: Helvetica-LightOblique, Helvetica, sans-serif;
+    font-style: oblique;
+    font-size: 1em;
+    width: 100%;
+    height: 0.5em;
+    padding: .5em;
+    display: block;
+}
+
+img {
+    width: 50%;
+    position: absolute;
+    margin-left: 10%;
+}
+
+div#controls div#call-controls button {
+    color: #000;
+    background: 0 0;
+    border: 1px solid #686865;
+}
+
+div#controls div#call-controls button#button-hangup {
+    display: none;
+}
+
+div#controls div#log {
+    width: 57%;
+    height: 23.5em;
+    margin-top: 1.5em;
+    text-align: left;
+    padding: 1.5em;
+    float: right;
+    overflow-y: scroll;
+    position: relative;
+}
+
+div#controls div#log p {
+    color: #686865;
+    font-family: 'Share Tech Mono', 'Courier New', Courier, fixed-width, serif;
+    font-size: 1.25em;
+    line-height: 1.25em;
+    margin-left: 1em;
+    text-indent: -1.25em;
+    width: 90%;
+}
+
+
+/* The switch - the box around the slider */
+
+.switch {
+    position: relative;
+    display: block;
+    width: 60px !important;
+    height: 34px !important;
+}
+
+
+/* Hide default HTML checkbox */
+
+.switch input {
+    opacity: 0;
+    width: 0;
+    height: 0;
+}
+
+
+/* The slider */
+
+.slider {
+    position: absolute;
+    cursor: pointer;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: #ccc;
+    -webkit-transition: .4s;
+    transition: .4s;
+}
+
+.slider:before {
+    position: absolute;
+    content: "";
+    height: 26px;
+    width: 26px;
+    left: 4px;
+    bottom: 4px;
+    background-color: white;
+    -webkit-transition: .4s;
+    transition: .4s;
+}
+
+input:checked+.slider {
+    background-color: #2196F3;
+}
+
+input:focus+.slider {
+    box-shadow: 0 0 1px #2196F3;
+}
+
+input:checked+.slider:before {
+    -webkit-transform: translateX(26px);
+    -ms-transform: translateX(26px);
+    transform: translateX(26px);
+}
+
+
+/* Rounded sliders */
+
+.slider.round {
+    border-radius: 34px;
+}
+
+.slider.round:before {
+    border-radius: 50%;
+}

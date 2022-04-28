@@ -1,0 +1,31 @@
+
+Instructions for development & test
+
+1. Install git with git bash (command line) - https://git-scm.com/downloads
+Ensure that git bash here option is checked, to be able to start git bash
+in a directory directly from the Windows explorer.
+
+2. Install nodeJS and npm - https://nodejs.org/en/
+
+3. Install http server from git bash command line as a global command:
+npm install http-server -g
+
+4. Download ngrok executable file - https://dashboard.ngrok.com/get-started
+Doesn't install, just a portable exe file in the zip file.
+
+5. Open git bash in the project library (TwilioToSpeech/simple-twilio-prototype/)
+
+6. Start http-server in the project directory (same as index.html) using git bash:
+http-server
+
+or with another port if 8080 is already allocated by another application. With for example port 9090 instead:
+
+http-server -p 9090
+
+7. Run the previously downloaded (#4) ngrok.exe from the Windows command line in order to expose the local http-server on the Internet. Change the port below to the one your local web server is using.
+
+ngrok.exe http 8080
+
+Ngrok will start and show you the exposed URLs for HTTP, HTTPS etc.
+
+8. Copy the ngrok Forwarding URL for HTTPS and open it in Chrome.
